@@ -40,13 +40,13 @@ export const EditQuestion = (props) => {
         <div className="input-group-prepend mb-2">
           <div className="input-group-text">
             <input type="checkbox" name="checkboxAnswerA"
-                   defaultChecked={String(singleQuestion.correct).includes('A')}
+                   defaultChecked={String(singleQuestion.correct).includes("A")}
                    onChange={(e) => {
-                     if (!String(state.testToBeChanged.questions[props.questionIndex].correct).includes('A')) {
-                       state.testToBeChanged.questions[props.questionIndex].correct += 'A';
+                     if (!String(state.testToBeChanged.questions[props.questionIndex].correct).includes("A")) {
+                       state.testToBeChanged.questions[props.questionIndex].correct += "A";
                      } else {
                        state.testToBeChanged.questions[props.questionIndex].correct = state
-                         .testToBeChanged.questions[props.questionIndex].correct.replace('A', '')
+                         .testToBeChanged.questions[props.questionIndex].correct.replace("A", "")
                      }
                    }}/>
           </div>
@@ -61,13 +61,13 @@ export const EditQuestion = (props) => {
         <div className="input-group-prepend mb-2">
           <div className="input-group-text">
             <input type="checkbox" name="checkboxAnswerB"
-                   defaultChecked={String(singleQuestion.correct).includes('B')}
+                   defaultChecked={String(singleQuestion.correct).includes("B")}
                    onChange={(e) => {
-                     if (!String(state.testToBeChanged.questions[props.questionIndex].correct).includes('B')) {
-                       state.testToBeChanged.questions[props.questionIndex].correct += 'B';
+                     if (!String(state.testToBeChanged.questions[props.questionIndex].correct).includes("B")) {
+                       state.testToBeChanged.questions[props.questionIndex].correct += "B";
                      } else {
                        state.testToBeChanged.questions[props.questionIndex].correct = state
-                         .testToBeChanged.questions[props.questionIndex].correct.replace('B', '')
+                         .testToBeChanged.questions[props.questionIndex].correct.replace("B", "")
                      }
                    }}/>
           </div>
@@ -81,13 +81,13 @@ export const EditQuestion = (props) => {
         <div className="input-group-prepend mb-2">
           <div className="input-group-text">
             <input type="checkbox" name="checkboxAnswerC"
-                   defaultChecked={String(singleQuestion.correct).includes('C')}
+                   defaultChecked={String(singleQuestion.correct).includes("C")}
                    onChange={(e) => {
-                     if (!String(state.testToBeChanged.questions[props.questionIndex].correct).includes('C')) {
-                       state.testToBeChanged.questions[props.questionIndex].correct += 'C';
+                     if (!String(state.testToBeChanged.questions[props.questionIndex].correct).includes("C")) {
+                       state.testToBeChanged.questions[props.questionIndex].correct += "C";
                      } else {
                        state.testToBeChanged.questions[props.questionIndex].correct = state
-                         .testToBeChanged.questions[props.questionIndex].correct.replace('C', '')
+                         .testToBeChanged.questions[props.questionIndex].correct.replace("C", "")
                      }
                    }}/>
           </div>
@@ -101,13 +101,13 @@ export const EditQuestion = (props) => {
         <div className="input-group-prepend mb-2">
           <div className="input-group-text">
             <input type="checkbox" name="checkboxAnswerD"
-                   defaultChecked={String(singleQuestion.correct).includes('D')}
+                   defaultChecked={String(singleQuestion.correct).includes("D")}
                    onChange={(e) => {
-                     if (!String(state.testToBeChanged.questions[props.questionIndex].correct).includes('D')) {
-                       state.testToBeChanged.questions[props.questionIndex].correct += 'D';
+                     if (!String(state.testToBeChanged.questions[props.questionIndex].correct).includes("D")) {
+                       state.testToBeChanged.questions[props.questionIndex].correct += "D";
                      } else {
                        state.testToBeChanged.questions[props.questionIndex].correct = state
-                         .testToBeChanged.questions[props.questionIndex].correct.replace('D', '')
+                         .testToBeChanged.questions[props.questionIndex].correct.replace("D", "")
                      }
                    }}/>
           </div>

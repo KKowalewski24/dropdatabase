@@ -46,14 +46,14 @@ export const LoginPage = (props) => {
             username: user.username
           });
 
-          sessionStorage.setItem('token', user.signInUserSession.idToken.jwtToken);
-          sessionStorage.setItem('accountType', user.attributes["custom:custom:account_type"]);
-          sessionStorage.setItem('username', user.username);
+          sessionStorage.setItem("token", user.signInUserSession.idToken.jwtToken);
+          sessionStorage.setItem("accountType", user.attributes["custom:custom:account_type"]);
+          sessionStorage.setItem("username", user.username);
         }
       ).catch(err => console.log(err));
 
       dispatch({type: UPDATE_LOGGED_IN, isLogged: true});
-      sessionStorage.setItem('isLoggedIn', true);
+      sessionStorage.setItem("isLoggedIn", true);
       document.location.replace(HOME_PATH);
     } catch (e) {
       alert(e.message);

@@ -134,14 +134,14 @@ export const UpdateTestPage = (props) => {
   const postTestToServer = () => {
     axios.delete(FIREBASE_PATH + "/test", {
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
       data: state.testToBeChangedOrig
     }).then(() => {
       console.log(JSON.stringify(state))
       axios.post(FIREBASE_PATH + "/test", state.testToBeChanged).then(() => {
         alert("Test has been updated");
-        document.location.replace('/');
+        document.location.replace("/");
       });
     }).catch((error) => console.log(error));
 
@@ -150,7 +150,7 @@ export const UpdateTestPage = (props) => {
   /*------------------------ RETURN REGION ------------------------*/
 
   if (typeof (state.testToBeChanged.questions) === "undefined") {
-    document.location.replace('/');
+    document.location.replace("/");
   }
 
   return (
@@ -175,7 +175,7 @@ export const UpdateTestPage = (props) => {
           Update Test
         </button>
         <button className="btn btn-danger white-text"
-                onClick={() => document.location.replace('/')}>
+                onClick={() => document.location.replace("/")}>
           Cancel
         </button>
       </div>

@@ -2,7 +2,7 @@ import React, {useReducer} from "react";
 import {BrowserRouter} from "react-router-dom";
 import Navbar from "../component/navbar/Navbar";
 import Routes from "./Routes";
-import _ from 'lodash'
+import _ from "lodash"
 import {
   START_SOLVING_TEST,
   UPDATE_COGNITO_USER,
@@ -10,19 +10,19 @@ import {
   UPDATE_LOGGED_IN
 } from "../constants";
 import {Auth} from "aws-amplify";
-import update from 'immutability-helper';
+import update from "immutability-helper";
 
 export const App = (props) => {
 
   /*----------------------- VARIABLE REGION -----------------------*/
   const initialState = {
-    testToBeChanged: '',
-    testToBeChangedOrig: '',
-    isUserLoggedIn: sessionStorage.getItem('isLoggedIn'),
-    userSessionId: sessionStorage.getItem('token'),
-    userAccountType: sessionStorage.getItem('accountType'),
-    username: sessionStorage.getItem('username'),
-    selectedTestToSolve: '',
+    testToBeChanged: "",
+    testToBeChangedOrig: "",
+    isUserLoggedIn: sessionStorage.getItem("isLoggedIn"),
+    userSessionId: sessionStorage.getItem("token"),
+    userAccountType: sessionStorage.getItem("accountType"),
+    username: sessionStorage.getItem("username"),
+    selectedTestToSolve: "",
   };
 
   function reducer(state, action) {
@@ -63,7 +63,7 @@ export const App = (props) => {
   const handleLogout = async () => {
     await Auth.signOut();
     dispatch({type: UPDATE_LOGGED_IN, isLogged: false});
-    localStorage.setItem('isLoggedIn', false);
+    localStorage.setItem("isLoggedIn", false);
     localStorage.clear();
     sessionStorage.clear();
   };

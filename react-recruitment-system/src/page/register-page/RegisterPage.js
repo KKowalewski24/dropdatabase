@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./RegisterPage.css";
-import {CANDIDATE_API, FIREBASE_PATH, HOME_PATH, TESTS_PATH} from "../../constants";
+import {CANDIDATE_API, HOME_PATH} from "../../constants";
 import {Auth} from "aws-amplify";
 import axios from "axios";
 
@@ -39,17 +39,18 @@ export const RegisterPage = (props) => {
         password: password,
         attributes: {
           email: email,
-          'custom:custom:account_type': userRole,
+          "custom:custom:account_type": userRole,
         }
       });
 
       axios.put(CANDIDATE_API + "/candidate", {
-          'requestToken': sessionStorage.getItem('token'),
-          'candidateName': username
+          "requestToken": sessionStorage.getItem("token"),
+          "candidateName": username
         }
       ).then((res) => {
         console.log(res);
-        document.location.replace(HOME_PATH)})
+        document.location.replace(HOME_PATH)
+      })
     } catch (e) {
       alert(e.message)
     }

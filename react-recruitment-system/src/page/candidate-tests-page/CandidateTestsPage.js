@@ -1,13 +1,6 @@
 import React, {Fragment, useContext, useEffect, useState} from "react";
 import axios from "axios";
-import {
-  CANDIDATE_API,
-  FIREBASE_PATH,
-  SOLVE_TEST_PATH,
-  START_SOLVING_TEST,
-  TESTS_PATH,
-  UPDATE_INPUT
-} from "../../constants";
+import {SOLVE_TEST_PATH, START_SOLVING_TEST} from "../../constants";
 import {AppContext} from "../../main/App";
 
 /**
@@ -26,9 +19,9 @@ export const CandidateTestsPage = (props) => {
   //TODO ADD AXIOS WITH REAL URL
 
   useEffect(() => {
-    axios.get( "https://lwn1nhn8s4.execute-api.us-east-1.amazonaws.com/cc_candidates/myself", {
+    axios.get("https://lwn1nhn8s4.execute-api.us-east-1.amazonaws.com/cc_candidates/myself", {
       params: {
-        'token': sessionStorage.getItem('token')
+        "token": sessionStorage.getItem("token")
       }
     })
       .then((res) => {
@@ -47,7 +40,7 @@ export const CandidateTestsPage = (props) => {
       type: START_SOLVING_TEST,
       test: it,
     });
-    sessionStorage.setItem('selectedTestToSolve', JSON.stringify(it));
+    sessionStorage.setItem("selectedTestToSolve", JSON.stringify(it));
 
     //TODO Tutaj jest wszystko ok bo sie dobrze obiekt wyswietla
     console.log(it);
@@ -83,7 +76,7 @@ export const CandidateTestsPage = (props) => {
           </header>
 
           {renderTestId(it.testUUID)}
-            <div>Recruter name: {it.user.userName}</div>
+          <div>Recruter name: {it.user.userName}</div>
           {renderStartSolvingButton(it)}
         </section>
       </Fragment>

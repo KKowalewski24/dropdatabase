@@ -15,20 +15,20 @@ export const CandidateListPage = (props) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    axios.get( "https://lwn1nhn8s4.execute-api.us-east-1.amazonaws.com/cc_candidates/cadidates", {
+    axios.get("https://lwn1nhn8s4.execute-api.us-east-1.amazonaws.com/cc_candidates/cadidates", {
       params: {
-        'token': sessionStorage.getItem('token')
+        "token": sessionStorage.getItem("token")
       }
     })
-        .then((res) => {
-          console.log(res)
-          setCandidateArray(res.data);
-          setIsLoaded(true);
-        })
-        .catch((err) => {
-          setIsLoaded(true);
-          alert(err.message)
-        });
+      .then((res) => {
+        console.log(res)
+        setCandidateArray(res.data);
+        setIsLoaded(true);
+      })
+      .catch((err) => {
+        setIsLoaded(true);
+        alert(err.message)
+      });
   }, [])
 
   const renderCandidateId = (id) => {

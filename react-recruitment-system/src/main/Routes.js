@@ -1,15 +1,15 @@
 import React, {useContext} from "react";
 import {Redirect, Route, Switch} from "react-router-dom";
 import {
+  ANSWERS_PATH,
   CANDIDATE_LIST_PATH,
   CREATE_TEST_PATH,
   EVALUATE_TEST_PATH,
   HOME_PATH,
   LOGIN_PATH,
   PROFILE_PATH,
-  ANSWERS_PATH,
-  SCORES_PATH,
   REGISTER_PATH,
+  SCORES_PATH,
   SOLVE_TEST_PATH,
   UPDATE_TEST_PATH
 } from "../constants";

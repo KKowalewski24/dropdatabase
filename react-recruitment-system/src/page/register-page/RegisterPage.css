@@ -10,7 +10,7 @@
     background-size: cover;
     background-image: url("../../assets/loginBackground.jpg");
     filter: blur(7px);
-/*    background-repeat: repeat-y;*/
+    /*    background-repeat: repeat-y;*/
 }
 
 .register-div {

@@ -1,10 +1,10 @@
-.bar{
-     position: absolute;
+.bar {
+    position: absolute;
     top: 100px;
     left: 10px;
 }
 
-#synonym, #translate{
+#synonym, #translate {
     transition-duration: 0.2s;
     left: 0;
     padding: 10px;
@@ -13,21 +13,21 @@
     z-index: 10;
 }
 
-ul{
-   list-style-position: inside;
+ul {
+    list-style-position: inside;
     text-align: left;
 }
 
-.hide{
-    position:absolute;
+.hide {
+    position: absolute;
     height: 100.5%;
-    top:0;
-    right:-30px;
+    top: 0;
+    right: -30px;
     width: 25px;
     vertical-align: middle;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-#hide-text, #hide-text-2{
+#hide-text, #hide-text-2 {
     margin: auto;
 }

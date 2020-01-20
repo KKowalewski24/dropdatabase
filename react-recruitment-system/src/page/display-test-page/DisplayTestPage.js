@@ -18,12 +18,12 @@ export const DisplayTestPage = (props) => {
   const {state, dispatch} = useContext(AppContext);
   const [testArray, setTestArray] = useState([]);
   const [load, setLoad] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   useEffect(() => {
     axios.get(FIREBASE_PATH + TESTS_PATH, {
       params: {
-        'token': sessionStorage.getItem('token')
+        "token": sessionStorage.getItem("token")
       }
     })
       .then(res => {
