@@ -5,7 +5,6 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 
-
 public class Authorizer {
 
     private static Algorithm algorithm = Algorithm.RSA256(new CognitoRSAKeyProvider());

@@ -8,7 +8,6 @@ import javax.ws.rs.core.Response;
 
 public class GetTranslate {
 
-
     public static Object handleRequest(APIRequestTest request, Context context) {
 
         try {

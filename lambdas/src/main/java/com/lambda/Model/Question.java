@@ -1,6 +1,5 @@
 package com.lambda.Model;
 
-
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBDocument;
 
@@ -31,7 +30,6 @@ public class Question {
         this.answerA = answerA;
     }
 
-
     @DynamoDBAttribute(attributeName = "AnswerB")
     public String getAnswerB() {
         return answerB;
@@ -40,7 +38,6 @@ public class Question {
     public void setAnswerB(String answerB) {
         this.answerB = answerB;
     }
-
 
     @DynamoDBAttribute(attributeName = "AnswerC")
     public String getAnswerC() {
@@ -59,7 +56,6 @@ public class Question {
     public void setAnswerD(String answerD) {
         this.answerD = answerD;
     }
-
 
     @DynamoDBAttribute(attributeName = "Correct")
     public String getCorrect() {
@@ -115,7 +111,6 @@ public class Question {
         this.questionAnswer = questionAnswer;
     }
 
-
     @DynamoDBAttribute(attributeName = "QuestionContent")
     public String getQuestionContent() {
         return questionContent;
@@ -124,6 +119,5 @@ public class Question {
     public void setQuestionContent(String questionContent) {
         this.questionContent = questionContent;
     }
-
 
 }

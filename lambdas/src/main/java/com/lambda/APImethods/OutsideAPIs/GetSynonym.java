@@ -14,7 +14,8 @@ import java.util.LinkedList;
 
 public class GetSynonym {
 
-    private static String key = "dict.1.1.20200102T105247Z.c53378c59867a774.d28a87bfe672b972ff76799265c8b1e49fb91bd0";
+    private static String key = "dict.1.1.20200102T105247Z.c53378c59867a774" +
+            ".d28a87bfe672b972ff76799265c8b1e49fb91bd0";
 
     private static class Resp {
         LinkedList<String> synonyms;

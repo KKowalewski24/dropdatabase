@@ -10,7 +10,6 @@ import com.lambda.Cognito.Authorizer;
 import com.lambda.Model.CandidateTest;
 import com.lambda.Tools.ResponeBuilder;
 
-import javax.ws.rs.core.Response;
 import java.util.HashMap;
 import java.util.Map;
 

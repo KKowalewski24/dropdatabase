@@ -5,8 +5,6 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDBAsyncClientBuilder;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.lambda.Model.Candidate;
-
-
 import com.lambda.Tools.ResponeBuilder;
 
 public class Get {
@@ -14,6 +12,7 @@ public class Get {
     private static DynamoDBMapper mapper = new DynamoDBMapper(client);
 
     public static Object handleRequest(Candidate request, Context context) {
-        return ResponeBuilder.RequestRecruter(() -> mapper.load(Candidate.class, request.getTestUUID()), request.getRequestToken());
+        return ResponeBuilder.RequestRecruter(() -> mapper.load(Candidate.class,
+                request.getTestUUID()), request.getRequestToken());
     }
 }

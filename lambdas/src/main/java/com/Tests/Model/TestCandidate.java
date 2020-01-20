@@ -1,7 +1,7 @@
 package com.Tests.Model;
 
-
 import static org.junit.Assert.assertEquals;
+
 public class TestCandidate {
     @org.junit.Test
     public void Test() {

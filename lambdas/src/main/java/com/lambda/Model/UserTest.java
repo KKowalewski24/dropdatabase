@@ -7,7 +7,6 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBIgnore;
 @DynamoDBDocument
 public class UserTest {
 
-
     private String userName;
     private String userToken;
 

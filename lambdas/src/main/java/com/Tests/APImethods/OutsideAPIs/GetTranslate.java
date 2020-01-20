@@ -3,6 +3,7 @@ package com.Tests.APImethods.OutsideAPIs;
 import javax.ws.rs.core.Response;
 
 import static org.junit.Assert.assertEquals;
+
 public class GetTranslate {
     @org.junit.Test
     public void Test() {

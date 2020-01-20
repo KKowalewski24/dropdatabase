@@ -36,7 +36,8 @@ public class PostTranslateTest {
         translated.setisClosed(question.getisClosed());
         translated.setisOpen(question.getisOpen());
         translated.setisNumerical(question.getisNumerical());
-        translated.setQuestionContent(TranslateTool.getTranslate(question.getQuestionContent(), dir));
+        translated.setQuestionContent(TranslateTool.getTranslate(question.getQuestionContent(),
+                dir));
         if (question.getisClosed()) {
             translated.setAnswerA(TranslateTool.getTranslate(question.getAnswerA(), dir));
             translated.setAnswerB(TranslateTool.getTranslate(question.getAnswerB(), dir));
@@ -44,7 +45,8 @@ public class PostTranslateTest {
             translated.setAnswerD(TranslateTool.getTranslate(question.getAnswerD(), dir));
             translated.setCorrect(question.getCorrect());
         } else if (question.getisOpen()) {
-            translated.setQuestionAnswer(TranslateTool.getTranslate(question.getQuestionAnswer(), dir));
+            translated.setQuestionAnswer(TranslateTool.getTranslate(question.getQuestionAnswer(),
+                    dir));
             translated.setCorrect(TranslateTool.getTranslate(question.getCorrect(), dir));
         } else if (question.getisNumerical()) {
             translated.setQuestionAnswer(question.getQuestionAnswer());

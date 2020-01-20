@@ -24,8 +24,10 @@ public class GetMyself {
     public static Object handleRequest(Candidate request, Context context) {
         return ResponeBuilder.Request(() -> {
             Map<String, AttributeValue> eav = new HashMap<>();
-            eav.put(":val", new AttributeValue().withS(Authorizer.getUserName(request.getRequestToken())));
-            DynamoDBScanExpression scanExpression = new DynamoDBScanExpression().withFilterExpression("candidateName =  :val").withExpressionAttributeValues(eav);
+            eav.put(":val",
+                    new AttributeValue().withS(Authorizer.getUserName(request.getRequestToken())));
+            DynamoDBScanExpression scanExpression =
+                    new DynamoDBScanExpression().withFilterExpression("candidateName =  :val").withExpressionAttributeValues(eav);
             Candidate candidate;
             try {
                 candidate = mapper.scan(Candidate.class, scanExpression).get(0);

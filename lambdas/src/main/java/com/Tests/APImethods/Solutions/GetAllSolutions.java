@@ -10,6 +10,7 @@ public class GetAllSolutions {
     @org.junit.Test
     public void Test() {
         assertEquals(Response.Status.UNAUTHORIZED,
-                com.lambda.APImethods.Solutions.GetAllSolutions.handleRequest(new CandidateTest(), null));
+                com.lambda.APImethods.Solutions.GetAllSolutions.handleRequest(new CandidateTest()
+                        , null));
     }
 }

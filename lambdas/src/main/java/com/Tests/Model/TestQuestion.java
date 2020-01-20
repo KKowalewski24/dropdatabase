@@ -1,6 +1,5 @@
 package com.Tests.Model;
 
-
 import static org.junit.Assert.assertEquals;
 
 public class TestQuestion {
