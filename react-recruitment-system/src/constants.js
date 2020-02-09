@@ -36,5 +36,6 @@ export const SOLVE_TEST_PATH = SLASH + SOLVE_TEST;
 export const EVALUATE_TEST_PATH = SLASH + EVALUATE_TEST;
 
 /*---------- KEYS ----------*/
-export const FIREBASE_PATH = "https://8ry9799483.execute-api.us-east-1.amazonaws.com/testowy";
-export const CANDIDATE_API = "https://lwn1nhn8s4.execute-api.us-east-1.amazonaws.com/cc_candidates";
+// Todo replace all empty Strings with your URL to backend
+export const FIREBASE_PATH = "";
+export const CANDIDATE_API = "";
